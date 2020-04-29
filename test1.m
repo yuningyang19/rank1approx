@@ -1,7 +1,8 @@
 
 %   rng('default');
 clc; clear;
-
+addpath ./funs
+addpath ./PROPACK
 d=3;  n=20;
 sz = ones(1,d); sz = n*sz;
 

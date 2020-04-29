@@ -3,8 +3,8 @@ function [X,Y,Lam,iter,eigvec,fval] = admm_rank1(A,opt)
 % by nonconvex ADMM
 % if max<A,X> needs to be computed, please use -A when calling this function instead.
 % 
-addpath PROPACK
-addpath funs
+addpath ../PROPACK
+addpath ../utils
     d = ndims(A);
     if d>=7 || d<=2
         error('order not support right now!\n')

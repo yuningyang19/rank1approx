@@ -2,8 +2,10 @@
 % This test is to compute the largest eigenvalue of A.
 
 clc; clear;
-addpath ./funs
+addpath ./alg
 addpath ./PROPACK
+addpath ./utils
+addpath ./tensor_generating
 d=4;  n=10;
 sz = ones(1,d); sz = n*sz;
 

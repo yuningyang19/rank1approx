@@ -1,4 +1,4 @@
-function [X,Y,Lam,iter,eigvec,fval] = admm_rank1(A,opt,fa)
+function [X,Y,Lam,iter,eigvec,fval] = admm_rank1(A,opt)
 % solve min <A,X> s.t. ||X||=1, rank_{CP}(X)=1, X\in S^{n^d}
 % by nonconvex ADMM
 % if max<A,X> needs to be computed, please use -A when calling this function instead.
@@ -26,6 +26,6 @@ addpath funs
     for i = 2 : d
         kp_eigvec = kron(eigvec,kp_eigvec);
     end
-    fval = A(:)'*kp_eigvec*fa;
+    fval = -A(:)'*kp_eigvec;     % because   A is in fact -A.
  
 end

@@ -1,10 +1,10 @@
-% example 3.1 of Nie  works
+% example 3.1 of Nie and Wang
 n=2;
 A1= zeros(n,n,n);
 A1(1,1,1) = 1.5578; A1(2,2,2) = 1.1226; A1(1,1,2) = -2.4443; A1(1,2,1) = A1(1,1,2); A1(2,1,1) = A1(1,1,2);
 A1(2,2,1) = -1.0982; A1(2,1,2) = A1(2,2,1); A1(1,2,2) = A1(2,2,1);
 
-n=3;    % Example 3.2 of Nie works
+n=3;    % Example 3.2 of Nie and Wang
 A2=zeros(n,n,n);
 A2(1,1,1)=-0.1281;A2(1,1,2)=0.0516*3; A2(1,1,3) = -0.0954*3; A2(1,2,2)=-0.1958*3;
 A2(1,2,3) = -0.1790*6; A2(1,3,3)=-0.2676*3; A2(2,2,2)=0.3251; A2(2,2,3)=0.2513*3; A2(2,3,3)=0.1773*3; A2(3,3,3)=0.0338;
@@ -21,7 +21,7 @@ A33 = double(symmetrize(tensor(A33)));
 
 
 
-n=3; % 3.4 works
+n=3; % 3.4
 A3 = zeros(n,n,n,n);
 A3(1,1,1,1) = 0.2883; A3(1,1,1,2) = -0.0031*4; A3(1,1,1,3) = 0.1973*4; A3(1,1,2,2) = -0.2485*6; A3(1,1,2,3) = -0.2939*12;
 A3(1,1,3,3) = 0.3847*6; A3(1,2,2,2) = 0.2972*4; A3(1,2,2,3) = 0.1862*12; A3(1,2,3,3) = 0.0919*12; A3(1,3,3,3) = -0.3619*4;
@@ -30,7 +30,7 @@ A3 = -double(symmetrize(tensor(A3)));
 
 
 
-% the mri data from jiang et al's paper
+% the mri data from Jiang et al's paper
 n=3; A4 = zeros(n,n,n,n); % strange 
 A4(1,1,1,1)=0.74694; A4(1,1,1,2)=-0.435103; A4(1,1,2,2)=0.454945; A4(1,2,2,2)=0.0657818; A4(2,2,2,2)=1;
 A4(1,1,1,3)=0.37089; A4(1,1,2,3)=-0.29883; A4(1,2,2,3)=-0.795157; A4(2,2,2,3)=0.139751; A4(1,1,3,3)=1.24733;
@@ -39,7 +39,7 @@ A4 =  double(symmetrize(tensor(A4)));
 
 
 
-% Example 3.5   works
+% Example 3.5   of Nie and Wang
 n = 5; A5 = zeros(n,n,n);
 for i = 1: n
     for j = 1: n
@@ -49,7 +49,7 @@ for i = 1: n
     end
 end
 
-n=5; A6 = zeros(n,n,n,n);   % works
+n=5; A6 = zeros(n,n,n,n);   % Nie and Wang
 for i = 1: n
     for j = 1: n
         for k = 1: n
@@ -60,7 +60,7 @@ for i = 1: n
     end
 end
 
-n=5; A7 = zeros(n,n,n,n);   % works
+n=5; A7 = zeros(n,n,n,n);   % Nie and Wang
 for i = 1: n
     for j = 1: n
         for k = 1: n
@@ -71,7 +71,7 @@ for i = 1: n
     end
 end
 
-n=5; A8 = zeros(n,n,n);   % works
+n=5; A8 = zeros(n,n,n);   % Nie and Wang
 for i = 1: n
     for j = 1: n
         for k = 1: n
@@ -93,5 +93,4 @@ for i1 = 1:n
     end
 end
 
-frob(A9)
 
